@@ -1,8 +1,17 @@
+# About this repository
+Things that I will learn while creating this repository:
+- [x] Use Prima in NestJS
+- [x] Create controllers, modules and services by using the NestJS CLI
+- [x] Use Class Validators to validate the DTOs easily
+- [x] Setup a Docker Compose file
+
+Credits to: https://github.com/vladwulf/nestjs-jwts
+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
-
-https://github.com/vladwulf/nestjs-jwts
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
