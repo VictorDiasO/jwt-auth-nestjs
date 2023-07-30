@@ -10,27 +10,31 @@ import {
 import { AuthService } from './auth.service';
 import { AuthDto } from './dto';
 import { Tokens } from './types';
-import { Request } from 'express';
-import { AccessTokenGuard, RefreshTokenGuard } from 'src/common/guards';
-import { GetCurrentUser, GetCurrentUserId } from 'src/common/decorators';
+import { RefreshTokenGuard } from 'src/common/guards';
+import {
+  GetCurrentUser,
+  GetCurrentUserId,
+  Public,
+} from 'src/common/decorators';
 
 @Controller('auth')
 export class AuthController {
   constructor(private authService: AuthService) {}
 
+  @Public()
   @Post('local/signup')
   @HttpCode(HttpStatus.CREATED)
   localSignup(@Body() dto: AuthDto): Promise<Tokens> {
     return this.authService.localSignup(dto);
   }
 
+  @Public()
   @Post('local/signin')
   @HttpCode(HttpStatus.OK)
   localSignin(@Body() dto: AuthDto): Promise<Tokens> {
     return this.authService.localSignin(dto);
   }
 
-  @UseGuards(AccessTokenGuard)
   @Post('logout')
   @HttpCode(HttpStatus.OK)
   logout(@GetCurrentUserId() userId: number) {
