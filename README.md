@@ -1,9 +1,13 @@
 # About this repository
 Things that I will learn while creating this repository:
-- [x] Use Prima in NestJS
+- [x] Use and Setup Prima in NestJS
 - [x] Create controllers, modules and services by using the NestJS CLI
 - [x] Use Class Validators to validate the DTOs easily
 - [x] Setup a Docker Compose file
+- [x] Creating Custom Decorators
+- [x] Creating Custom Guards
+- [x] Creating Global Safety with Guards
+- [ ] Create Integration Tests
 
 Credits to: https://github.com/vladwulf/nestjs-jwts
 
